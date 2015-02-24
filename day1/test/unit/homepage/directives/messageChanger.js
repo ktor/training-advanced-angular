@@ -10,6 +10,7 @@ describe('aa.homepage.messageChanger', function() {
       el,
       markup = '<message-changer message="message" change-to="lorem ipsum" />';
 
+  beforeEach(module('aa.templates'));
   beforeEach(module('aa.homepage'));
   beforeEach(inject(function($rootScope, $compile) {
     el = angular.element(markup);

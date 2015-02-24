@@ -1,4 +1,5 @@
 angular.module('aa', [
+  'aa.templates',
   'aa.homepage'
 ])
 

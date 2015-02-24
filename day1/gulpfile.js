@@ -13,10 +13,13 @@ var runSequence     = require('run-sequence');
 var src             = {toString: function() { return 'src' }};
 src.app             = {toString: function() { return src + '/app' }};
 src.app.files       = src.app + '/**/*.js';
+src.app.templates   = src.app + '/**/*.html';
 src.index           = src + '/index.html';
 
 var dist            = {toString: function() { return 'dist' }};
 dist.index          = dist + '/index.html';
+dist.app            = {toString:function() { return dist + '/app' }};
+dist.app.templates  = dist.app + '/templates.js';
 
 var vendor          = {toString: function() { return 'bower_components' }};
 
@@ -46,6 +49,16 @@ gulp.task('jshint', function() {
     .pipe(g.jshint.reporter('jshint-stylish'));
 });
 
+gulp.task('templates', function() {
+  return gulp.src(src.app.templates)
+    .pipe(g.angularTemplatecache({
+      module: 'aa.templates',
+      standalone: true,
+      root: 'app',
+    }))
+    .pipe(gulp.dest(''+dist.app));
+});
+
 gulp.task('serve', function() {
   return g.connect.server({
     host: 'localhost',
@@ -64,12 +77,14 @@ gulp.task('watch', function() {
 
   // compile handlers
   gulp.watch(src.app.files, ['index', 'jshint']);
+  gulp.watch(src.app.templates, ['templates']);
   gulp.watch(src.index, ['index']);
 
   // livereload handlers
   gulp.watch([
       src.app.files,
-      src.index,
+      dist.app.templates,
+      dist.index,
     ]).on('change', g.livereload.changed);
 });
 
@@ -90,7 +105,7 @@ gulp.task('karma', function() {
 
 gulp.task('default', function() {
   return runSequence(
-    ['index', 'jshint', 'serve'],
+    ['index', 'jshint', 'templates', 'serve'],
     'watch'
   );
 });
