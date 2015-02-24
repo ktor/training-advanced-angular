@@ -1,0 +1,24 @@
+## Numerous always-ignore items
+Thumbs.db
+desktop.ini
+nbproject
+*.diff
+*.err
+*.log
+*.swp
+*.vi
+*~
+*.sass-cache
+*.sublime-workspace
+.DS_Store
+.cache
+.idea
+.project
+.settings
+.tmproj
+
+## Folders to ignore
+bower_components
+node_modules
+
+## Files to ignore
