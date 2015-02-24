@@ -4,8 +4,9 @@
   <title>advanced-angular</title>
 </head>
 <body>
-  <div ng-controller="Homepage.IndexController">
+  <div ng-controller="Homepage.IndexController as ctrl">
     {{message}}
+    <button ng-click="ctrl.setMessage()">set message</button>
   </div>
 
   <script src="bower_components/angular/angular.js"></script>
