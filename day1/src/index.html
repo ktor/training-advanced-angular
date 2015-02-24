@@ -4,11 +4,14 @@
   <title>advanced-angular</title>
 </head>
 <body>
-  {{message}}
+  <div ng-controller="Homepage.IndexController">
+    {{message}}
+  </div>
 
   <script src="bower_components/angular/angular.js"></script>
 
   <script src="app/main.js"></script>
   <script src="app/homepage/module.js"></script>
+  <script src="app/homepage/controllers/index.js"></script>
 </body>
 </html>
