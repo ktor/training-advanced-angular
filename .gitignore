@@ -19,6 +19,7 @@ nbproject
 
 ## Folders to ignore
 bower_components
+dist
 node_modules
 
 ## Files to ignore
