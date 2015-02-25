@@ -1,6 +1,7 @@
 angular.module('aa', [
   'ngResource',
   'ngMessages',
+  'pascalprecht.translate',
   'ui.router',
 
   'aa.templates',
@@ -8,11 +9,11 @@ angular.module('aa', [
   'aa.homepage'
 ])
 
-.config(function(userProvider) {
+.config(function($translateProvider, userProvider) {
   'use strict';
 
-  console.log(userProvider.preferredLanguage);
-  userProvider.setSessionLength(2000);
+  $translateProvider
+    .preferredLanguage(userProvider.preferredLanguage);
 })
 
 .run(function($rootScope) {
