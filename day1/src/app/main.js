@@ -1,5 +1,6 @@
 angular.module('aa', [
   'aa.templates',
+  'aa.shared',
   'aa.homepage'
 ])
 
