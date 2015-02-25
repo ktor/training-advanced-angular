@@ -1,12 +1,17 @@
 angular.module('aa.shared')
 
-.service('githubRepository', function($http, $q) {
+.service('githubRepository', function(githubResource) {
   'use strict';
 
-  this.loadSearch = function(q) {
-    var req1 = $http.get('//api.github.com/search/repositories?q=' + q);
-    var req2 = $http.get('//api.github.com/search/repositories?q=' + q.toUpperCase());
+  var requestsCache = {};
 
-    return $q.all([req1, req2]);
+  this.loadSearch = function(q) {
+    var cacheKey = 'loadSearch' + q;
+
+    if (!requestsCache[cacheKey]) {
+      requestsCache[cacheKey] = githubResource.search({q: q});
+    }
+
+    return requestsCache[cacheKey].$promise;
   };
 });

@@ -1,4 +1,5 @@
 angular.module('aa', [
+  'ngResource',
   'ui.router',
 
   'aa.templates',
