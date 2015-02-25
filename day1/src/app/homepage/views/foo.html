@@ -12,16 +12,21 @@
         You did not enter your email address correctly...
       </div>
     </div>
-
   </div>
+
   <div class="form-group">
     <label for="exampleInputPassword1" translate="password"></label>
+    <span translate="your_password_contains"></span>
+    <strong>{{data.password.length}}</strong>
+    <span translate="characters_counter" translate-values="{charactersCount:data.password.length}"></span>
     <input ng-model="data.password" type="password" class="form-control" equals="{{data.passwordRepeat}}" id="exampleInputPassword1" placeholder="Password">
   </div>
+
   <div class="form-group">
     <label for="exampleInputPassword1" translate="password_repeat"></label>
     <input ng-model="data.passwordRepeat" type="password" class="form-control" equals="{{data.password}}" id="exampleInputPassword1" placeholder="Password">
   </div>
+
   <button type="submit" class="btn btn-default" translate="submit"></button>
 
   <div class="lang-switcher pull-right">

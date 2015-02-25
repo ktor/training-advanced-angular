@@ -14,6 +14,7 @@ angular.module('aa', [
 
   $translateProvider
     .preferredLanguage(userProvider.preferredLanguage)
+    .useMessageFormatInterpolation()
     .useStaticFilesLoader({
       prefix: '/app/_shared/translations/',
       suffix: '.json'

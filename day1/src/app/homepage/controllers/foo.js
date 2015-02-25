@@ -4,7 +4,8 @@ angular.module('aa.homepage')
   'use strict';
 
   $scope.data = {
-    lang: $translate.use()
+    lang: $translate.use(),
+    password: ''
   };
 
   this.setLang = function(lang) {

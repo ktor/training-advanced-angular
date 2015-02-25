@@ -8,7 +8,8 @@ angular.module('aa.shared')
       'email_address': 'Email address',
       'password': 'Password',
       'password_repeat': 'Password repeat',
+      'your_password_contains': 'Your password contains',
       'submit': 'Submit',
-      'new_messages_counter': '{messagesCount, plural, one{new message} other{new messages}}',
+      'characters_counter': '{charactersCount, plural, one{character} other{characters}}'
     });
 });

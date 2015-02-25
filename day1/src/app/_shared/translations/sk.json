@@ -2,6 +2,7 @@
   "email_address": "Email addresa",
   "password": "Heslo",
   "password_repeat": "Zopakujte heslo",
+  "your_password_contains": "Vaše heslo obsahuje",
   "submit": "Odoslať",
-  "new_messages_counter": "{messagesCount, plural, one{new message} other{new messages}}"
+  "characters_counter": "{charactersCount, plural, one{znak} few{znaky} other{znakov}}"
 }
