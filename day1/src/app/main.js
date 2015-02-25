@@ -6,7 +6,8 @@ angular.module('aa', [
 
   'aa.templates',
   'aa.shared',
-  'aa.homepage'
+  'aa.homepage',
+  'aa.conversations'
 ])
 
 .config(function($translateProvider, userProvider) {

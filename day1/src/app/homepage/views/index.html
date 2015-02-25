@@ -1,7 +1,11 @@
 <div class="well">
   {{message}}
   <message-changer message="message" change-to="lorem ipsum dolor sit amet"></message-changer>
-  <a ui-sref="homepage.form" class="pull-right">form controller</a>
+
+  <nav class="pull-right">
+    <a ui-sref="homepage.form">form controller</a> |
+    <a ui-sref="conversations.index">conversations</a>
+  </nav>
 </div>
 
 <ul>
