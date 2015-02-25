@@ -1,15 +1,15 @@
+<!doctype html>
 <html ng-app="aa">
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
   <title>advanced-angular</title>
 </head>
 <body>
-  <div ng-controller="Homepage.IndexController as ctrl">
-    {{message}}
-    <message-changer message="message" change-to="lorem ipsum dolor sit amet" />
-  </div>
+  <div ui-view="layout"></div>
 
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
 
   <!-- inject:js -->
   <!-- endinject -->
