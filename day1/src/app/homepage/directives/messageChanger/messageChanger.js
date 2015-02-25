@@ -10,6 +10,7 @@ angular.module('aa.homepage')
     controllerAs: 'ctrl',
     controller: function($scope) {
       this.changeMessage = function() {
+        $scope.message = $scope.changeTo;
       };
     },
 

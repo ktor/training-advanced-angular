@@ -25,5 +25,12 @@ describe('aa.homepage.messageChanger', function() {
 
 
   it('should prepare directive', function() {
+    expect(el.find('button').length).toEqual(1);
+  });
+
+  it('should change message', function() {
+    ctrl.changeMessage();
+    $scope.$digest(); // musi tu byt lebo po metode kontrolera sa scope neupdatuje sam
+    expect($scope.message).toEqual('lorem ipsum');
   });
 });
