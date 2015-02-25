@@ -9,7 +9,9 @@ angular.module('aa.homepage')
     $scope.message = 'Lorem ipsum dolor sit amet';
   };
 
-  githubRepository.loadSearch($stateParams.q).then(function(res) {
-    $scope.data.searchResults = res.items;
-  });
+  if ($stateParams.q) {
+    githubRepository.loadSearch($stateParams.q).then(function(res) {
+      $scope.data.searchResults = res.items;
+    });
+  }
 });
