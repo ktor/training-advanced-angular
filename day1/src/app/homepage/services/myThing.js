@@ -9,8 +9,7 @@ angular.module('aa.homepage')
 
   this.getMessage = function() {
     setTimeout(function() {
-      // dfd.resolve([privateVar, this.publicVar]);
-      dfd.reject({error: '403'});
+      dfd.resolve([privateVar, this.publicVar]);
     }, 250);
 
     return dfd.promise;
