@@ -4,6 +4,11 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
   <title>advanced-angular</title>
+  <style>
+    [ng-click] {cursor: pointer;}
+    .lang-switcher a {opacity: 0.5; }
+    .lang-switcher .active {opacity: 1;}
+  </style>
 </head>
 <body>
   <div ui-view="layout"></div>
@@ -12,6 +17,7 @@
   <script src="bower_components/angular-messages/angular-messages.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
   <script src="bower_components/angular-translate/angular-translate.js"></script>
+  <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
   <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
 
   <!-- inject:js -->

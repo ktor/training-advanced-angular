@@ -23,4 +23,9 @@
     <input ng-model="data.passwordRepeat" type="password" class="form-control" equals="{{data.password}}" id="exampleInputPassword1" placeholder="Password">
   </div>
   <button type="submit" class="btn btn-default" translate="submit"></button>
+
+  <div class="lang-switcher pull-right">
+    <a ng-click="ctrl.setLang('en')" ng-class="{active:data.lang === 'en'}"><img src="images/langflag-en.png"></a>
+    <a ng-click="ctrl.setLang('sk')" ng-class="{active:data.lang === 'sk'}"><img src="images/langflag-sk.png"></a>
+  </div>
 </form>

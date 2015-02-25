@@ -1,0 +1,7 @@
+{
+  "email_address": "Email addresa",
+  "password": "Heslo",
+  "password_repeat": "Zopakujte heslo",
+  "submit": "Odoslať",
+  "new_messages_counter": "{messagesCount, plural, one{new message} other{new messages}}"
+}

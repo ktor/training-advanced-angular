@@ -13,7 +13,11 @@ angular.module('aa', [
   'use strict';
 
   $translateProvider
-    .preferredLanguage(userProvider.preferredLanguage);
+    .preferredLanguage(userProvider.preferredLanguage)
+    .useStaticFilesLoader({
+      prefix: '/app/_shared/translations/',
+      suffix: '.json'
+    });
 })
 
 .run(function($rootScope) {
