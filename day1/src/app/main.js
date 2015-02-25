@@ -7,6 +7,8 @@ angular.module('aa', [
 ])
 
 .config(function(userProvider) {
+  'use strict';
+
   console.log(userProvider.preferredLanguage);
   userProvider.setSessionLength(2000);
 })
