@@ -19,6 +19,18 @@ angular.module('aa.homepage', [
         '@homepage.index': {
           templateUrl: 'app/homepage/views/index.html'
         }
+      },
+      resolve: {
+        isAuthenticated: 'checkIsAuth'
+      }
+    })
+    .state('homepage.foo', {
+      url: '/foo',
+      views: {
+        'layout@': {
+          controller: 'Homepage.FooController',
+          templateUrl: 'app/_shared/layouts/1col.html'
+        }
       }
     });
 });
