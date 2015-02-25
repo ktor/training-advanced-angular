@@ -24,15 +24,15 @@ angular.module('aa.homepage', [
         isAuthenticated: 'checkIsAuth'
       }
     })
-    .state('homepage.foo', {
-      url: '/foo',
+    .state('homepage.form', {
+      url: '/form',
       views: {
         'layout@': {
-          controller: 'Homepage.FooController as ctrl',
+          controller: 'Homepage.FormController as ctrl',
           templateUrl: 'app/_shared/layouts/1col.html'
         },
-        '@homepage.foo': {
-          templateUrl: 'app/homepage/views/foo.html'
+        '@homepage.form': {
+          templateUrl: 'app/homepage/views/form.html'
         }
       }
     });

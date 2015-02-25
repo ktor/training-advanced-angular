@@ -1,6 +1,6 @@
 angular.module('aa.homepage')
 
-.controller('Homepage.FooController', function($scope, $translate) {
+.controller('Homepage.FormController', function($scope, $translate) {
   'use strict';
 
   $scope.data = {
