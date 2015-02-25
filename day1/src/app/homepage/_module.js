@@ -9,8 +9,17 @@ angular.module('aa.homepage', [
       url: '',
       abstract: true
     })
+    .state('homepage.foo', {
+      url: '/foo',
+      views: {
+        'layout@': {
+          controller: 'Homepage.FooController',
+          templateUrl: 'app/_shared/layouts/1col.html'
+        }
+      }
+    })
     .state('homepage.index', {
-      url: '',
+      url: '/:q',
       views: {
         'layout@': {
           controller: 'Homepage.IndexController',
@@ -22,15 +31,6 @@ angular.module('aa.homepage', [
       },
       resolve: {
         isAuthenticated: 'checkIsAuth'
-      }
-    })
-    .state('homepage.foo', {
-      url: '/foo',
-      views: {
-        'layout@': {
-          controller: 'Homepage.FooController',
-          templateUrl: 'app/_shared/layouts/1col.html'
-        }
       }
     });
 });
