@@ -13,8 +13,11 @@ angular.module('aa.homepage', [
       url: '/foo',
       views: {
         'layout@': {
-          controller: 'Homepage.FooController',
+          controller: 'Homepage.FooController as ctrl',
           templateUrl: 'app/_shared/layouts/1col.html'
+        },
+        '@homepage.foo': {
+          templateUrl: 'app/homepage/views/foo.html'
         }
       }
     })

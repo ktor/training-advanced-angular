@@ -1,5 +1,6 @@
 angular.module('aa', [
   'ngResource',
+  'ngMessages',
   'ui.router',
 
   'aa.templates',
