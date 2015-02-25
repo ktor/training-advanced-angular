@@ -1,11 +1,11 @@
 angular.module('aa.homepage')
 
-.controller('Homepage.IndexController', function($scope, Vehicle, Bike) {
+.controller('Homepage.IndexController', function($scope, Vehicle, Bike, vehicleFactory) {
   'use strict';
 
   console.log(Bike);
 
-  var bike = new Bike();
+  var bike = vehicleFactory(Bike);
   console.log(bike);
 
   bike.drive();

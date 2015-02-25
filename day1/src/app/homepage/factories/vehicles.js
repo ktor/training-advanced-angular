@@ -25,4 +25,13 @@ angular.module('aa.homepage')
   Bike.prototype = Object.create(Vehicle.prototype);
 
   return Bike;
+})
+
+.factory('vehicleFactory', function() {
+  'use strict';
+
+  return function(Ctor) {
+    // some crazy stuff
+    return new Ctor();
+  };
 });
