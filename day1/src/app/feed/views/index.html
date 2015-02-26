@@ -3,8 +3,9 @@
 
 <ul>
   <li ng-repeat="post in data.posts" class="well" style="list-style:none">
+    <a class="label label-danger pull-right">&times;</a>
+    <span class="label label-info pull-right">{{post.created | mydate:'yyyy MMM dd'}}</span>
     <h4>{{post.author.displayname}}</h4>
-    <span class="date">{{post.created | mydate:'yyyy MMM dd'}}</span>
     <p>{{post.text}}</p>
   </li>
 </ul>
