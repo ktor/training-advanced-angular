@@ -1,7 +1,7 @@
 angular.module('aa.auth', [
 ])
 
-.config(function($stateProvider, apiProvider) {
+.config(function($stateProvider) {
   'use strict';
 
   $stateProvider
@@ -21,6 +21,10 @@ angular.module('aa.auth', [
         }
       }
     });
+})
+
+.config(function(apiProvider) {
+  'use strict';
 
   apiProvider.endpoint('auth')
     .route('/auth/:action')
