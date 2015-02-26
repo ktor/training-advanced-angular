@@ -1,7 +1,7 @@
 angular.module('aa.feed', [
 ])
 
-.config(function($stateProvider) {
+.config(function($stateProvider, apiProvider) {
   'use strict';
 
   $stateProvider
@@ -21,4 +21,7 @@ angular.module('aa.feed', [
         }
       }
     });
+
+  apiProvider.endpoint('posts')
+    .route('/posts/:uuid');
 });

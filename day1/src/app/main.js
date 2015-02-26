@@ -22,6 +22,12 @@ angular.module('aa', [
     });
 })
 
+.config(function(apiProvider) {
+  'use strict';
+
+  apiProvider.setBaseUrl('//localhost:3000/fakeapi');
+})
+
 .run(function($rootScope) {
   'use strict';
 
