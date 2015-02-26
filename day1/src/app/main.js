@@ -13,6 +13,24 @@ angular.module('aa', [
   'aa.feed'
 ])
 
+.config(function($stateProvider) {
+  'use strict';
+
+  $stateProvider
+    .state('error', {
+      abstract: true,
+      views: {
+        'layout@': {
+          templateUrl: 'app/_shared/layouts/1col-narrow.html'
+        }
+      }
+    })
+    .state('error.404', {
+      url: '*path',   // catch all other URLs, this rule must come last!
+      templateUrl: 'app/_shared/views/error/404.html'
+    });
+})
+
 .config(function($translateProvider, userProvider) {
   'use strict';
 
