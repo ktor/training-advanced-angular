@@ -1,0 +1,141 @@
+[
+  {
+    "author": {"displayname": "Janne Salmi"},
+    "created": "Jun 27, 2014 13:15:36 +0200",
+    "event": null,
+    "files": [],
+    "text": "What else do you guys want to tweek or add to Solved service??",
+    "topics": ["Design", "Processes", "ICT"],
+    "uuid": "da1282e1-3bfc-40cb-9b1b-c36fe877f194"
+  },
+
+  {
+    "author": {"displayname": "Janne Hietaniemi"},
+    "created": "Jun 15, 2014 13:23:35 +0200",
+    "event": null,
+    "files": [],
+    "text": "For me one of the key question in our problem solving is free dialogue vs. strict process and discipline.",
+    "topics": ["Processes"],
+    "uuid": "12269afe-8c79-4d5a-a8c6-529678fa247f"
+  },
+
+  {
+    "author": {"displayname": "Alejandro Lucero"},
+    "created": "Jun 15, 2014 12:54:55 +0200",
+    "event": null,
+    "files": [
+      {
+        "name": "2014-06-15 12.40.06.jpg",
+        "mimeType": "image/jpeg"
+      }
+    ],
+    "text": "I have sketched a diagram that I hope triggers the conversation around the Development Roadmap.",
+    "topics": ["Design"],
+    "uuid": "6b6ca37f-d2f3-4f73-a18e-cfef453db7db"
+  },
+
+  {
+    "author": {"displayname": "Taneli Tikka"},
+    "created": "Jun 14, 2014 20:11:31 +0200",
+    "event": null,
+    "files": [],
+    "text": "I would like to have a chat about \"habit forming design\" from a user psychology point of view.",
+    "topics": ["Technology", "Processes", "Design", "ICT"],
+    "uuid": "8d1aaaf5-28c2-4010-bc7d-24ef6e0e6cf1"
+  },
+
+  {
+    "author": {"displayname": "Janne Salmi"},
+    "created": "Jun 12, 2014 17:12:39 +0200",
+    "event": null,
+    "files": [],
+    "text": "Let's open the discussion on the development roadmap",
+    "topics": [],
+    "uuid": "5c402c80-d994-4f08-87c2-0fc8db2c4a86"
+  },
+
+  {
+    "author": {"displayname": "Janne Hietaniemi"},
+    "created": "Jun 12, 2014 17:06:35 +0200",
+    "event": null,
+    "files": [],
+    "text": "We had a discussion with Rado and Janne Salmi.",
+    "topics": [],
+    "uuid": "fe19eca1-535f-4fb0-b372-87b5db7f15d0"
+  },
+
+  {
+    "author": {"displayname": "Radoslav Mizera"},
+    "created": "May 5, 2014 18:26:13 +0200",
+    "text": "Come celebrate beta release",
+    "event": {
+      "title": "The Party",
+      "startDateTime": "May 15, 2014 18:00:00 +0200"
+    },
+    "files": [],
+    "topics": [],
+    "uuid": "8bc23b03-3357-4fed-ab7c-47a81732c233"
+  },
+
+  {
+    "author": {"displayname": "Radoslav Mizera"},
+    "created": "May 5, 2014 18:23:37 +0200",
+    "event": null,
+    "files": [],
+    "text": "Hi",
+    "topics": [],
+    "uuid": "5f658fd7-72aa-415c-85d1-1c9e9181c720"
+  },
+
+  {
+    "author": {"displayname": "Marked Individual"},
+    "created": "May 5, 2014 00:14:47 +0200",
+    "event": null,
+    "files": [],
+    "text": "You wont believe this!",
+    "topics": ["Design", "ICT"],
+    "uuid": "1b07b903-1c1c-46c2-adc8-fed774ba9e07"
+  },
+
+  {
+    "author": {"displayname": "Mysterion"},
+    "created": "May 5, 2014 00:14:30 +0200",
+    "event": null,
+    "files": [],
+    "text": "Coon & Kthulhu are doing some damage",
+    "topics": [],
+    "uuid": "d1afaf1b-486d-456d-a547-2b434acf8984"
+  },
+
+  {
+    "author": {"displayname": "Radoslav Mizera"},
+    "created": "May 4, 2014 22:36:44 +0200",
+    "event": {
+      "title": "Initial meet",
+      "startDateTime": "June 24, 2014 20:00:00 +0200"
+    },
+    "files": [],
+    "text": "Let's discuss project roadmap",
+    "topics": [],
+    "uuid": "b66c69cb-dc68-4f0f-bb49-a81fd0898698"
+  },
+
+  {
+    "author": {"displayname": "Radoslav Mizera"},
+    "created": "Jan 14, 2014 23:16:44 +0100",
+    "text": "Article about Finland",
+    "event": null,
+    "files": [
+      {
+        "name": "image.jpg",
+        "mimeType": "image/jpeg"
+      },
+      {
+        "name": "image.jpg",
+        "mimeType": "image/jpeg"
+      }
+    ],
+    "topics": ["Technology", "Society"],
+    "uuid": "53f0faa8-2774-4cbc-87c0-93da52ba230c"
+  }
+]
