@@ -3,6 +3,7 @@ angular.module('aa', [
   'ngResource',
   'ngMessages',
   'ngStorage',
+  'ngAnimate',
   'pascalprecht.translate',
   'ui.router',
 
