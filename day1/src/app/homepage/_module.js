@@ -10,7 +10,7 @@ angular.module('aa.homepage', [
       abstract: true
     })
     .state('homepage.index', {
-      url: '?q',
+      url: '/?q',
       views: {
         'layout@': {
           controller: 'Homepage.IndexController',

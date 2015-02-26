@@ -27,7 +27,7 @@ angular.module('aa', [
       }
     })
     .state('error.404', {
-      url: '*path',   // catch all other URLs, this rule must come last!
+      url: '*path', // catch all other URLs, this rule must come last!
       templateUrl: 'app/_shared/views/error/404.html'
     });
 })
@@ -61,8 +61,11 @@ angular.module('aa', [
   }];
 })
 
-.run(function($rootScope, $localStorage, user) {
+.run(function($rootScope, $localStorage, user, $location, $state) {
   'use strict';
 
   user.init($localStorage.user);
+  if ($location.path() === "") {
+    $state.go('homepage.index');
+  };
 });
