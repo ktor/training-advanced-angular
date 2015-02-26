@@ -9,7 +9,9 @@ angular.module('aa.feed', [
       url: '/feed',
       abstract: true,
       resolve: {
-        isAuthenticated: 'AuthCheckFactory'
+        isAuthenticated: function(authCheckFactory) {
+          return authCheckFactory();
+        }
       }
     })
     .state('feed.index', {

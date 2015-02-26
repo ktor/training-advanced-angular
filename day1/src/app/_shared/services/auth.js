@@ -26,20 +26,22 @@ angular.module('aa.shared')
 })
 
 
-.factory('AuthCheckFactory', function($q, $state, auth) {
+.factory('authCheckFactory', function($q, $state, auth) {
   'use strict';
 
-  var dfd = $q.defer();
+  return function() {
+    var dfd = $q.defer();
 
-  dfd.promise.catch(function(reason) {
-    $state.go('auth.login');
-  });
+    dfd.promise.catch(function(reason) {
+      $state.go('auth.login');
+    });
 
-  if (auth.isAutheticated()) {
-    dfd.resolve();
-  } else {
-    dfd.reject();
-  }
+    if (auth.isAutheticated()) {
+      dfd.resolve();
+    } else {
+      dfd.reject();
+    }
 
-  return dfd.promise;
+    return dfd.promise;
+  };
 });
