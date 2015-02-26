@@ -26,6 +26,7 @@
   "devel": true,
 
   "globals": {
-    "angular": false
+    "angular": false,
+    "autosize": false
   }
 }
