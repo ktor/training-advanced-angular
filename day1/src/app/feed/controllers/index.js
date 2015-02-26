@@ -8,9 +8,7 @@ angular.module('aa.feed')
 
 
   this.loadMore = function() {
-    postsRepository.loadMore();//.then(function() {
-      //console.log('dddd');
-    //});
+    postsRepository.loadMore();
   };
 
   postsRepository.load().then(function(payload) {
