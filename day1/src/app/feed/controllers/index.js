@@ -11,6 +11,10 @@ angular.module('aa.feed')
     postsRepository.loadMore();
   };
 
+  this.delete = function(post) {
+    postsRepository.delete(post);
+  };
+
   postsRepository.load().then(function(payload) {
     $scope.data.posts = payload.data.posts;
     $scope.meta.posts = payload.meta.posts;

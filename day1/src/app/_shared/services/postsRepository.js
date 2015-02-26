@@ -19,7 +19,9 @@ angular.module('aa.shared')
     this.load().then(function(payload) {
       var from = payload.data.posts.length;
 
-      api.posts.get({from: from}).then(function(lmPayload) {
+      api.posts.get({
+        from: from
+      }).then(function(lmPayload) {
         var newPosts = lmPayload.data.posts;
 
         [].push.apply(payload.data.posts, newPosts);
@@ -27,5 +29,20 @@ angular.module('aa.shared')
       });
     });
 
+  };
+
+  this.delete = function(post) {
+    api.posts.remove({
+      uuid: post.uuid
+    });
+    var cachedFeedsPromise = this.load();
+    cachedFeedsPromise.then(function(feeds) {
+      var postToDeleteIndex = _.findIndex(feeds.data.posts, function(cachedPost) {
+        return cachedPost.uuid === post.uuid;
+      });
+      if (postToDeleteIndex != -1) {
+        feeds.data.posts.splice(postToDeleteIndex, 1);
+      };
+    });
   };
 });
