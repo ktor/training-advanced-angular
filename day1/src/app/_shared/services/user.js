@@ -11,6 +11,17 @@ angular.module('aa.shared')
     this.sessionLength = sessionLength;
   };
 
+  User.prototype.setData = function(data) {
+    var self = this;
+
+    angular.forEach(data, function(val, prop) {
+      self[prop] = val;
+    });
+  };
+
+  User.prototype.init = function(userData) {
+    this.setData(userData);
+  };
 
   this.setSessionLength = function(len) {
     sessionLength = len;
