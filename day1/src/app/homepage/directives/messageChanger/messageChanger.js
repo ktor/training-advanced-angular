@@ -8,9 +8,10 @@ angular.module('aa.homepage')
     templateUrl: 'app/homepage/directives/messageChanger/messageChanger.html',
 
     controllerAs: 'ctrl',
-    controller: function($scope) {
+    bindToController: true,
+    controller: function() {
       this.changeMessage = function() {
-        $scope.message = $scope.changeTo;
+        this.message = this.changeTo;
       };
     },
 
