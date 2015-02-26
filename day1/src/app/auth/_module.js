@@ -29,4 +29,26 @@ angular.module('aa.auth', [
   apiProvider.endpoint('auth')
     .route('/auth/:action')
     .addUnsecuredAction('login', 'POST', {action: 'login'});
+})
+
+.config(function($provide) {
+  'use strict';
+
+  $provide.decorator('auth', function($delegate) {
+    var login = function(username, password) {
+      var start = new Date();
+      var promise = $delegate.login(username, password);
+
+      promise.then(function () {
+        console.log('Geo location took: ' + (new Date() - start) + 'ms');
+      });
+
+      return promise;
+    };
+
+    return {
+      isAutheticated: $delegate.isAutheticated,
+      login: login
+    };
+  });
 });
