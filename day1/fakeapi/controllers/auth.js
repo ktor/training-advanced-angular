@@ -27,10 +27,10 @@ var login = function(req, res) {
     uuid: user.uuid,
     username: user.username,
   }, 'secret');
-  res.send({jwToken:token});
+  res.send({jwtToken: token});
 };
 
 
 exports = module.exports = function(apiRouter) {
-  apiRouter.get('/auth/login', login);
+  apiRouter.post('/auth/login', login);
 };
