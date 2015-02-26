@@ -21,10 +21,10 @@ app.get('/', function(req, res) {
 });
 
 var router = express.Router();
-// router.use(expressJwt({secret: 'secret'}).unless({path: [
-//   '/fakeapi/auth/login',
-//   '/fakeapi/auth/register',
-// ]}));
+router.use(expressJwt({secret: 'secret'}).unless({path: [
+  '/fakeapi/auth/login',
+  '/fakeapi/auth/register',
+]}));
 require(__dirname + '/controllers/auth')(router);
 require(__dirname + '/controllers/posts')(router);
 app.use('/fakeapi', router);

@@ -31,6 +31,17 @@ angular.module('aa', [
   apiProvider.setBaseUrl('//localhost:3000/fakeapi');
 })
 
+.config(function($httpProvider, jwtInterceptorProvider) {
+  'use strict';
+
+  $httpProvider.interceptors.push('err401Interceptor');
+  $httpProvider.interceptors.push('jwtInterceptor');
+
+  jwtInterceptorProvider.tokenGetter = ['user', function(user) {
+    return user.jwtToken;
+  }];
+})
+
 .run(function($rootScope, $localStorage, user) {
   'use strict';
 
