@@ -4,8 +4,17 @@ angular.module('aa.feed')
   'use strict';
 
   $scope.data = {};
+  $scope.meta = {};
 
-  postsRepository.load().then(function(posts) {
-    $scope.data.posts = posts;
+
+  this.loadMore = function() {
+    postsRepository.loadMore();//.then(function() {
+      //console.log('dddd');
+    //});
+  };
+
+  postsRepository.load().then(function(payload) {
+    $scope.data.posts = payload.data.posts;
+    $scope.meta.posts = payload.meta.posts;
   });
 });

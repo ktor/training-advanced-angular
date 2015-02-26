@@ -16,7 +16,7 @@ angular.module('aa.feed', [
       url: '',
       views: {
         'layout@': {
-          controller: 'Feed.IndexController',
+          controller: 'Feed.IndexController as ctrl',
           templateUrl: 'app/_shared/layouts/1col-narrow.html'
         },
         '@feed.index': {
