@@ -1,6 +1,6 @@
 angular.module('aa.feed')
 
-.controller('Feed.IndexController', function($scope, postsRepository) {
+.controller('Feed.IndexController', function FeedIndexController($scope, postsRepository) {
   'use strict';
 
   $scope.data = {};
