@@ -19,9 +19,6 @@ angular.module('aa.homepage', [
         '@homepage.index': {
           templateUrl: 'app/homepage/views/index.html'
         }
-      },
-      resolve: {
-        isAuthenticated: 'checkIsAuth'
       }
     })
     .state('homepage.form', {

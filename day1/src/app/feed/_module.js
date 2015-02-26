@@ -7,7 +7,10 @@ angular.module('aa.feed', [
   $stateProvider
     .state('feed', {
       url: '/feed',
-      abstract: true
+      abstract: true,
+      resolve: {
+        isAuthenticated: 'AuthCheckFactory'
+      }
     })
     .state('feed.index', {
       url: '',
